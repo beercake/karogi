@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Karogi",
+  "version": "0.1",
+  "minimum_chrome_version": "48",
+  "app": {
+    "background": {
+      "scripts": ["main.js"]
+    }
+  }
+}
