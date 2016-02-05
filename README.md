@@ -7,7 +7,7 @@ Tildes karoga ripoffs
 Globālās npm pakas:
 
 ```
-sudo npm install grunt-cli -g
+sudo npm install -g grunt-cli
 ```
 
 Instalēt lokālās npm pakas:
@@ -20,4 +20,10 @@ Nokompilēt:
 
 ```
 grunt
+```
+
+Notestēt:
+
+```
+npm test
 ```
