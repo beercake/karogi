@@ -1,5 +1,3 @@
-test = require('tape').test
-
-test 'Testing', (assert)->
+test 'testing', (assert)->
   assert.pass 'is possible'
   assert.end()
