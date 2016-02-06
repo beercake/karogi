@@ -4,7 +4,10 @@ module.exports = (grunt) ->
       compile:
         files:
           'build/karogi.js': ['src/*.coffee']
-          'build/test.js':   ['test.coffee', 'test/*.coffee']
+          'build/test.js':   [
+            'test/config.coffee',
+            'test/**/*.coffee'
+          ]
     slim:
       dist:
         files:
@@ -21,7 +24,7 @@ module.exports = (grunt) ->
         files: ['**/*'],
         tasks: ['clear']
       coffee:
-        files: ['src/*.coffee', 'test/*.coffee'],
+        files: ['src/*.coffee', 'test/**/*.coffee'],
         tasks: ['coffee', 'test']
       slim:
         files: ['src/*.slim']
