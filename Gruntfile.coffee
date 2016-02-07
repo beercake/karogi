@@ -20,9 +20,6 @@ module.exports = (grunt) ->
       files: ['build/test.js']
 
     watch:
-      clear:
-        files: ['**/*'],
-        tasks: ['clear']
       coffee:
         files: ['src/*.coffee', 'test/**/*.coffee'],
         tasks: ['coffee', 'test']
@@ -34,6 +31,5 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-contrib-coffee'
   grunt.loadNpmTasks 'grunt-slim'
   grunt.loadNpmTasks 'grunt-tape'
-  grunt.loadNpmTasks 'grunt-clear'
   grunt.registerTask 'test', 'tape'
   grunt.registerTask 'default', ['coffee', 'slim']
