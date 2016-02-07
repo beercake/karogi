@@ -9,6 +9,7 @@ module.exports = (grunt) ->
         files:
           'app/background.js': ['src/background.coffee']
           'app/game.js': ['src/game.coffee']
+          'app/core.js': ['src/core/*.coffee']
           'app/ui.js':     ['src/ui.coffee']
           'test.js':   [
             'test/config.coffee',
@@ -27,7 +28,7 @@ module.exports = (grunt) ->
 
     watch:
       coffee:
-        files: ['src/*.coffee', 'test/**/*.coffee'],
+        files: ['src/**/*.coffee', 'test/**/*.coffee'],
         tasks: ['coffee', 'test', 'browserify']
       slim:
         files: ['src/*.slim']
