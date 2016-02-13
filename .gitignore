@@ -1,3 +1,6 @@
 npm-debug.log
 node_modules/
 build
+app/**/*.js
+app/**/*.html
+test.js
