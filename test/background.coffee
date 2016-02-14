@@ -13,13 +13,13 @@ root.chrome =
           chrome.app.initialized = true
           callback()
 
-test 'karogi', (assert) ->
-  imports 'build/karogi.js'
+test 'background', (assert) ->
+  imports 'app/background.js'
 
   assert.ok chrome.app.initialized,
     'inits chrome app'
 
-  assert.ok chrome.app.view == 'build/index.html',
+  assert.ok chrome.app.view == 'index.html',
     'feeds in index.html view'
 
   assert.ok chrome.app.options['id'] == 'karogi',

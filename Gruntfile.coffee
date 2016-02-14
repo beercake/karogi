@@ -1,28 +1,34 @@
 module.exports = (grunt) ->
   grunt.initConfig
+    pkg: grunt.file.readJSON('package.json')
+    browserify:
+      'app/game.js': ['app/game.js']
+
     coffee:
       compile:
         files:
-          'build/karogi.js': ['src/*.coffee']
-          'build/test.js':   [
+          'app/background.js': ['src/background.coffee']
+          'app/game.js': ['src/game.coffee']
+          'app/ui.js':     ['src/ui.coffee']
+          'test.js':   [
             'test/config.coffee',
             'test/**/*.coffee'
           ]
     slim:
       dist:
         files:
-          'build/index.html': ['src/index.slim']
+          'app/index.html': ['src/index.slim']
 
     tape:
       options:
         pretty: false
         output: 'console'
-      files: ['build/test.js']
+      files: ['test.js']
 
     watch:
       coffee:
         files: ['src/*.coffee', 'test/**/*.coffee'],
-        tasks: ['coffee', 'test']
+        tasks: ['coffee', 'test', 'browserify']
       slim:
         files: ['src/*.slim']
         tasks: 'slim'
@@ -33,3 +39,4 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-tape'
   grunt.registerTask 'test', 'tape'
   grunt.registerTask 'default', ['coffee', 'slim']
+  grunt.loadNpmTasks 'grunt-browserify'

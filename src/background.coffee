@@ -3,7 +3,7 @@ chrome.app.runtime.onLaunched.addListener ->
   screenHeight = screen.availHeight
   width = 500
   height = 300
-  chrome.app.window.create 'build/index.html',
+  chrome.app.window.create 'index.html',
     id: 'karogi'
     outerBounds:
       width: width

@@ -2,28 +2,14 @@
 
 Tildes karoga ripoffs
 
-## Izstrādātājiem
+## Lai palaistu:
 
-Globālās npm pakas:
+1. Nokompilējam
+2. chrome://extensions/ norādam app/ direktoriju
 
-```
-sudo npm install -g grunt-cli
-```
-
-Instalēt lokālās npm pakas:
+## Izstrādātājiem:
 
 ```
 npm install
-```
-
-Nokompilēt:
-
-```
-grunt
-```
-
-Notestēt:
-
-```
-npm test
+grunt watch
 ```

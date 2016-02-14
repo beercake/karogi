@@ -5,7 +5,7 @@
   "minimum_chrome_version": "48",
   "app": {
     "background": {
-      "scripts": ["build/karogi.js"]
+      "scripts": ["background.js"]
     }
   }
 }
